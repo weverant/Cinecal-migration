@@ -63,13 +63,13 @@ export async function getStaticPaths() {
 const previousPage = () => {
     if (props.index === 0) return;
 
-    return props.index >= 10 ? props.index : `0${props.index}`;
+    return props.index >= 10 ? props.index : `/0${props.index}`;
 };
 
 const nextPage = () => {
     if (props.index + 2 > data[props.formattedMonth].length) return;
 
-    return props.index >= 8 ? props.index + 2 : `0${props.index + 2}`;
+    return props.index >= 8 ? props.index + 2 : `/0${props.index + 2}`;
 };
 
 const props = Astro.props;
