@@ -1,0 +1,149 @@
+/*-----------------------------------------------------------------------------------*/
+/*  Layout
+/*-----------------------------------------------------------------------------------*/
+.container {
+  position: relative;
+  width: 100%;
+  @include screen(tablet) {
+    padding-left: 60px;
+  }
+  @include screen(desktop) {
+    padding-left: 80px;
+  }
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 100px auto 0;
+  padding: 30px;
+  @include screen(tablet) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__about {
+    max-width: 1000px;
+  }
+}
+
+.chapter {
+  display: flex;
+  position: relative;
+  margin-bottom: 100px;
+  flex-direction: column;
+  @include screen(tablet) {
+    width: 50%;
+  }
+  @include screen(desktop) {
+    margin-bottom: 150px;
+  }
+
+  img {
+    margin: 30px auto 0;
+  }
+
+  p {
+    max-width: 600px;
+  }
+
+  &__part {
+    position: relative;
+    @include screen(mobile) {
+      padding: 0 30px;
+    }
+  }
+
+  &--center {
+    margin: 0 auto;
+  }
+
+  &__movie {
+    img {
+      width: 200px;
+      @include screen(tablet) {
+        width: 200px;
+      }
+    }
+  }
+
+  &__calendar {
+    img {
+      width: 160px;
+      @include screen(tablet) {
+        width: 150px;
+      }
+    }
+  }
+
+  &__data {
+    img {
+      width: 140px;
+      @include screen(tablet) {
+        width: 150px;
+      }
+    }
+  }
+}
+
+.about {
+  border: 1px solid #000;
+  display: flex;
+  color: #000;
+  flex-direction: column;
+  @include screen(tablet) {
+    flex-direction: row;
+  }
+
+  &__el {
+    width: 100%;
+    padding: 30px;
+    @include screen(tablet) {
+      width: 50%;
+    }
+
+    &:last-child {
+      border-top: 1px solid #000;
+      @include screen(tablet) {
+        border-left: 1px solid #000;
+        border-top: none;
+      }
+    }
+  }
+
+  &__info {
+    a {
+      text-decoration: underline;
+      font-weight: 700;
+      transition: color 0.25s cubic-bezier(0.77, 0, 0.175, 1);
+
+      &:hover {
+        color: #969696;
+      }
+    }
+  }
+
+  &__img {
+    background-image: url("../images/pp.jpg");
+    background-size: 240px;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 300px;
+    width: 300px;
+    display: block;
+    margin: auto;
+    position: relative;
+    @include screen(tablet) {
+      background-size: cover;
+    }
+  }
+}
+
+.section {
+  max-width: 100%;
+  padding-left: 30px;
+  padding-right: 30px;
+  @include screen(tablet) {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}

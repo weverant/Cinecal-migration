@@ -1,0 +1,233 @@
+/*-----------------------------------------------------------------------------------*/
+/*  Typography
+/*-----------------------------------------------------------------------------------*/
+
+/* oswald-regular - latin */
+@font-face {
+	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: 'Oswald';
+	font-style: normal;
+	font-weight: 400;
+	src: url('../fonts/oswald-v49-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  
+  /* oswald-600 - latin */
+  @font-face {
+	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: 'Oswald';
+	font-style: normal;
+	font-weight: 600;
+	src: url('../fonts/oswald-v49-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+
+  /* inter-700 - latin */
+@font-face {
+	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 700;
+	src: url('../fonts/inter-v12-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+    
+  /* inter-300 - latin */
+  @font-face {
+	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 300;
+	src: url('../fonts/inter-v12-latin-300.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  
+  
+
+body {
+	font: {
+		family: $font-family-base;
+		weight: 300;
+		style: normal;
+		size: 20px;
+	}
+	line-height: 1.6;
+	color: $text-color;
+}
+
+strong {
+	color: #000;
+}
+
+.title {
+	color: $title-color;
+	font-weight: 600;
+	line-height: 1;
+	letter-spacing: -0.03em;
+	font: {
+		family: $font-family-title;
+	}
+
+	&--small {
+		text-decoration: underline;
+		margin-bottom: 40px;
+	}
+
+	&__about {
+		border-left: 1px solid #000;
+		border-right: 1px solid #000;
+		border-top: 1px solid #000;
+		margin-bottom: 0;
+		padding: 30px;
+		width: 100%;
+	}
+
+	&__section {
+		color: $text-color;
+		font-weight: 300;
+		flex: 0 0 100%;
+		font-size: 25px;
+		display: block;
+		margin-bottom: 60px;
+		@include screen(mobile) {
+			padding-left: 30px;
+		}
+	}
+
+	&__header {
+		max-width: 500px;
+		margin-bottom: 50px;
+		font-size: 60px;
+		@include screen(tablet) {
+			max-width: 500px;
+			margin-bottom: 70px;
+			font-size: 70px;
+		}
+		@include screen(desktop) {
+			max-width: 700px;
+			margin-bottom: 70px;
+			font-size: 85px;
+		}
+		@include screen(desktop-xlg) {
+			max-width: 900px;
+			margin-bottom: 70px;
+			font-size: 120px;
+		}
+	}
+
+	&__date {
+		margin-top: 0;
+		padding-top: 20px;
+		font-size: 100px;
+		line-height: 1;
+		@include screen(desktop) {
+			font-size: 150px;
+		}
+	}
+
+	&--big {
+		font-size: 60px;
+		@include screen("(max-width: 768px)") {
+			margin-top: 0;
+		}
+		@include screen("(max-width: 1240px)") {
+			margin-top: 0;
+		}
+		@include screen(desktop) {
+			font-size: 110px;
+		}
+	}
+
+	&__event {
+		margin-top: 10px;
+		margin-bottom: 50px;
+		position: relative;
+		line-height: 1.2;
+		max-width: 80%;
+		font-size: 25px;
+		@include screen(mobile) {
+			margin-top: 15px;
+			margin-bottom: 50px;
+			font-size: 32px;
+			max-width: 70%;
+		}
+		@include screen(tablet) {
+			margin-top: 20px;
+			margin-bottom: 100px;
+			font-size: 42px;
+			max-width: 60%;
+		}
+		@include screen(desktop) {
+			max-width: 50%;
+		}
+
+		&::after {
+			content: "";
+			width: 15%;
+			height: 1px;
+			background-color: #000;
+			position: absolute;
+			left: 105%;
+			top: 50%;
+			@include screen(mobile) {
+				width: 35%;
+			}
+			@include screen(tablet) {
+				width: 65%;
+				left: 100%;
+			}
+			@include screen(desktop) {
+				width: 95%;
+				left: 105%;
+				height: 0.03em;
+			}
+		}
+	}
+
+	&__month {
+		display: inline-block;
+		font-size: 40px;
+		line-height: 1.2;
+		text-align: center;
+		margin: 0;
+
+		@include screen(mobile) {
+			font-size: 75px;
+		}
+		@include screen(tablet) {
+			font-size: 120px;
+		}
+		@include screen(desktop) {
+			font-size: 160px;
+		}
+		@include screen(desktop-xlg) {
+			font-size: 240px;
+		}
+	}
+}
+
+p {
+	margin-bottom: 1.25em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+	margin: 2.75rem 0 1rem;
+	line-height: 1.12;
+}
+
+h1 {
+	margin-top: 0;
+	font-size: 56px;
+}
+
+h2 {
+	font-size: 42px;
+}
+
+h3 {
+	font-size: 32px;
+}
+
+h4 {
+	font-size: 24px;
+}

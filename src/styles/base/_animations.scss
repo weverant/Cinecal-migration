@@ -1,0 +1,32 @@
+/*-----------------------------------------------------------------------------------*/
+/*  Animations
+/*-----------------------------------------------------------------------------------*/
+@keyframes slide {
+  from {height: 0;}
+  to {height: 100%;}
+}
+@keyframes slideback {
+  from {height: 100%;}
+  to {height: 0;}
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes wow {
+  to{
+    transform: translateX(0);
+  }
+ }
+ @keyframes wowLeft {
+   to{
+     transform: translateX(0);
+   }
+  }

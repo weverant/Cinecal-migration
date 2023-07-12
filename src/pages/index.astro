@@ -1,0 +1,27 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Today from '../components/Today.vue';
+---
+
+<Layout title='Home | Cinecal'>
+    <div class='page page--home page--current'>
+        <div class='header'>
+            <div class='header__main'>
+                <div class='header__content'>
+                    <h1 class='title title__header'>
+                        CineCal, le calendrier du cinéma
+                    </h1>
+                    <span class='header__text'
+                        >CineCal est un calendrier qui met en avant un événement
+                        marquant lié au thème du cinéma depuis ses débuts, pour
+                        chaque jour de l’année.</span
+                    >
+                    <a class='link link__header' href='calendrier'
+                        >Découvrir le calendrier</a
+                    >
+                </div>
+            </div>
+            <Today client:only='vue' />
+        </div>
+    </div>
+</Layout>

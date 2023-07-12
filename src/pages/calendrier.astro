@@ -1,0 +1,12 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Calendar from '../components/Calendar.vue';
+---
+
+<Layout title='Calendrier | Cinecal'>
+    <div>
+        <div class='month page page--calendar page--current'>
+            <Calendar client:only='vue' />
+        </div>
+    </div>
+</Layout>

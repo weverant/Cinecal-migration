@@ -1,0 +1,23 @@
+/*-----------------------------------------------------------------------------------*/
+/*  Config
+/*-----------------------------------------------------------------------------------*/
+
+// Colors
+
+$text-color: rgba(0,0,0,.70);
+
+$title-color: #000;
+$background-color: #f4f4f4;
+
+
+// Type
+
+$font-family-base: ('inter', sans-serif, Georgia, Cambria, 'Times New Roman', Times, serif);
+$font-family-title: ('Oswald', sans-serif, 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Geneva, Verdana, sans-serif);
+
+$box-size3: calc(100% / 3);
+$box-size23: calc(100% / 3 * 2);
+
+:root {   
+    --easing: cubic-bezier(0.77, 0, 0.175, 1);
+}
