@@ -1,7 +1,7 @@
 <template>
     <li class="box" :data-day="data.day">
         <a
-            :href="`${data.month
+            :href="`/${data.month
                 .normalize('NFD')
                 .replace(/[\u0300-\u036f]/g, '')
                 .toLowerCase()}/${data.day}`"
