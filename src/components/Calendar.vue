@@ -5,7 +5,7 @@
         @change-month="updateData"
     />
 
-    <ul class="calendar" data-month="juillet">
+    <ul class="calendar">
         <TransitionGroup name="list">
             <CalendarDay v-for="day in monthData" :key="day" :data="day" />
         </TransitionGroup>
