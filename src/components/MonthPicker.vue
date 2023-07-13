@@ -60,7 +60,9 @@ const emits = defineEmits(['changeMonth']);
         background-color: #eeeeee;
         transition: transform 0.45s var(--easing);
         animation: slideback ease 0.3s forwards;
-        border: 1px inset #000;
+
+        border-top: 1px inset #000;
+        border-left: 1px inset #000;
     }
 
     &__el {

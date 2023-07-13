@@ -5,11 +5,9 @@
         @change-month="updateData"
     />
 
-    <ul class="calendar">
-        <TransitionGroup name="list">
-            <CalendarDay v-for="day in monthData" :key="day" :data="day" />
-        </TransitionGroup>
-    </ul>
+    <TransitionGroup tag="ul" class="calendar" name="list">
+        <CalendarDay v-for="day in monthData" :key="day" :data="day" />
+    </TransitionGroup>
 </template>
 
 <script setup>
@@ -47,17 +45,19 @@ updateData();
 
 <style lang="scss">
 .box {
+    position: relative;
     height: 400px;
 }
 
-.list-move,
-.list-enter-active,
-.list-leave-active {
-    transition: all 0.48s ease;
+.list-move .box__content,
+.list-enter-active .box__content,
+.list-leave-active .box__content {
+    transition: all 0.48s cubic-bezier(0.77, 0, 0.175, 1);
 }
 
-.list-enter-from,
-.list-leave-to {
+.list-enter-from .box__content,
+.list-leave-to .box__content {
     opacity: 0;
+    transform: translateY(140px);
 }
 </style>

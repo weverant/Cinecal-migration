@@ -297,6 +297,7 @@ body {
 
 
 .info {
+  font-family: $font-family-title;
   text-align: center;
   height: 100px;
   display: flex;
@@ -649,7 +650,7 @@ body {
     background-color: $title-color;
     text-transform: uppercase;
     letter-spacing: 2px;
-    padding: 10px 14px;
+    padding: 14px 18px;
     font-size: 12px;
 
     transition: all 0.25s ease-in;
