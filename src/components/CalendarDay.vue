@@ -20,7 +20,6 @@
                 </div>
                 <div class="box__img">
                     <img
-                        loading="lazy"
                         height="200"
                         :src="getImgUrl()"
                         :alt="`image illustrative : ${data.title}`"
