@@ -78,7 +78,7 @@ const { slug } = Astro.params;
 ---
 
 <Layout title={`${props.title} | Cinecal`}>
-    <di class='page page--content'>
+    <div class='page page--content'>
         <div class='content'>
             <span class='mois'>{props.month}</span>
             <h2 class='title title__event'>{props.title}</h2>
@@ -139,5 +139,5 @@ const { slug } = Astro.params;
                 </div>
             </div>
         </div>
-    </di>
+    </div>
 </Layout>
